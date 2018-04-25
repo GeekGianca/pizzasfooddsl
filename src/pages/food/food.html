@@ -9,10 +9,33 @@
     <button ion-button menuToggle>
       <ion-icon name="md-menu"></ion-icon>
     </button>
-    <ion-title>Menu</ion-title>
+    <ion-title>Menu Comidas Rapidas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	
+	<ion-card *ngFor="let item of food | async">
+  <img src="{{item.Image}}"/>
+  <ion-card-content>
+    <ion-card-title>
+      {{item.Name}}
+      </ion-card-title>
+    <p>
+      {{item.Description}}
+    </p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-right clear small (click)="addFavorites(item.key)">
+        <ion-icon name="md-heart" ></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-right clear small (click)="addToCart(item.Price,item.Name,item.Discount,item.key)">
+        <ion-icon name="md-add-circle"></ion-icon>
+        <div>Agregar al carrito</div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
 </ion-content>

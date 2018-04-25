@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   login(){
-    /*try{
+    try{
       if(this.user.email != undefined){
         if(this.user.password != undefined){
           //const result = this.afAuth.loginUser(this.user.email, this.user.password);
@@ -50,8 +50,8 @@ export class HomePage {
       }
     }catch(error){
       console.error('Cath Error: ',error);
-    }*/
-    this.navCtrl.setRoot(DashboardPage);
+    }
+    //this.navCtrl.setRoot(DashboardPage);
   }
 
   signUp(){

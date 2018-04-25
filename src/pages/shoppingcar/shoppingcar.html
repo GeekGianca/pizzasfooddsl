@@ -5,14 +5,22 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>shoppingcar</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="md-menu"></ion-icon>
+    </button>
+    <ion-title>Carrito de compras</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+	<ion-card *ngFor="let item of foods | async">
+  <ion-card-header>
+    {{item.Name}}
+  </ion-card-header>
+  <ion-card-content>
+    {{item.Discount}}
+  </ion-card-content>
+</ion-card>
 </ion-content>

@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { OrdersPage } from '../pages/orders/orders';
-import { YourordersPage } from '../pages/yourorders/yourorders';
+import { ShoppingcarPage } from '../pages/shoppingcar/shoppingcar';
 import { LocalsPage } from '../pages/locals/locals';
 import { FoodPage } from '../pages/food/food';
 
@@ -28,7 +28,7 @@ export class MyApp {
     this.pages = [
       { title: 'Menu', component: DashboardPage },
       { title: 'Pedidos', component: OrdersPage },
-      { title: 'Ordenes', component: YourordersPage },
+      { title: 'Ordenes', component: ShoppingcarPage },
       { title: 'Locales disponibles', component: LocalsPage },
       { title: 'Cerrar Sesion', component: FoodPage }
     ];

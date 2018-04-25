@@ -12,6 +12,9 @@ import { HomePage } from '../pages/home/home';
 import {FIREBASE_CONFIG} from './app.firebase.config';
 import {DashboardPage} from "../pages/dashboard/dashboard";
 import {RegisterPage} from "../pages/register/register";
+import {FoodPage} from "../pages/food/food"
+import {LocalsPage} from "../pages/locals/locals"
+import {ShoppingcarPage} from "../pages/shoppingcar/shoppingcar"
 import {RecoverpasswordPage} from "../pages/recoverpassword/recoverpassword";
 import { AuthProvider } from '../providers/auth/auth';
 import { FirebaseDatabaseServiceProvider } from '../providers/firebase-database-service/firebase-database-service';
@@ -22,7 +25,10 @@ import { FirebaseDatabaseServiceProvider } from '../providers/firebase-database-
     HomePage,
     DashboardPage,
     RegisterPage,
-    RecoverpasswordPage
+    RecoverpasswordPage,
+    FoodPage,
+    LocalsPage,
+    ShoppingcarPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,10 @@ import { FirebaseDatabaseServiceProvider } from '../providers/firebase-database-
     HomePage,
     DashboardPage,
     RegisterPage,
-    RecoverpasswordPage
+    RecoverpasswordPage,
+    FoodPage,
+    LocalsPage,
+    ShoppingcarPage
   ],
   providers: [
     StatusBar,

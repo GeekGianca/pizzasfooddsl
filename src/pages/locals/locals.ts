@@ -8,7 +8,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-locals',
   templateUrl: 'locals.html',
@@ -19,7 +18,7 @@ export class LocalsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LocalsPage');
+    
   }
 
 }

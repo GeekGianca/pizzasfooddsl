@@ -1,16 +1,18 @@
-<ion-header>
+<ion-header primary>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="md-menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Menu Localales</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list inset>
-    <button ion-item *ngFor="let item of food" (click)="itemSelected(item)">
-      {{ item.Name }}
-    </button>
-  </ion-list>
+<ion-content class="card-background-page">
+
+ <ion-card *ngFor="let item of items | async">
+    <img src="{{item.Image}}" (click)="showLocals(item.key)"/>
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab mini (click)="viewToCart()"><ion-icon name="md-cart"></ion-icon></button>
+  </ion-fab>
 </ion-content>

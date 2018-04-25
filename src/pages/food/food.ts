@@ -1,25 +1,36 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the FoodPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Observable } from 'rxjs/Observable';
+import { AngularFireList,AngularFireDatabase } from 'angularfire2/database'
 
-@IonicPage()
 @Component({
   selector: 'page-food',
   templateUrl: 'food.html',
 })
 export class FoodPage {
+	
+selectFood: any;
+foodRef: AngularFireList<any>;
+food: Observable<any[]>;
+foodList = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public db: AngularFireDatabase) {
+  	this.selectFood =  navParams.get('keylcl');
+  	this.foodRef = db.list('Food/');
+  	this.foodRef.snapshotChanges().subscribe(item =>{
+  		item.forEach(item => {
+  			console.log(item.type);
+  			console.log(item.key);
+  			console.log(item.payload.val());
+  			this.food = item.payload.val();
+  		});
+  	});
+  	console.log("Array: ", this.food);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FoodPage');
+    console.log("Food Selected: ",this.selectFood);
   }
 
 }

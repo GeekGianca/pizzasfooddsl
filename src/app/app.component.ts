@@ -4,6 +4,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+import { OrdersPage } from '../pages/orders/orders';
+import { YourordersPage } from '../pages/yourorders/yourorders';
+import { LocalsPage } from '../pages/locals/locals';
+import { FoodPage } from '../pages/food/food';
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -19,11 +26,11 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Menu', component: 'DashboardPage' },
-      { title: 'Pedidos', component: 'OrdersPage' },
-      { title: 'Ordenes', component: 'YourordersPage' },
-      { title: 'Locales disponibles', component: 'LocalsPage' },
-      { title: 'Cerrar Sesion', component: 'FoodPage' }
+      { title: 'Menu', component: DashboardPage },
+      { title: 'Pedidos', component: OrdersPage },
+      { title: 'Ordenes', component: YourordersPage },
+      { title: 'Locales disponibles', component: LocalsPage },
+      { title: 'Cerrar Sesion', component: FoodPage }
     ];
   }
 

@@ -1,0 +1,50 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>-->
+
+<ion-content padding class="background-image">
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>
+        <img src="assets/imgs/icon_background.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+    <ion-list padding>
+      <ion-item class="item-ion">
+        <ion-input color="text-color" type="text" [(ngModel)]="user.email" placeholder="E-mail"></ion-input>
+      </ion-item>
+    </ion-list>
+
+  <ion-list padding>
+    <ion-item class="item-ion">
+      <ion-input color="text-color" type="password" [(ngModel)]="user.password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button full color="secondary" (click)="login()">Iniciar sesion</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button full color="primary" (click)="signUp()">Registrarme</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div center text-center>
+      <button ion-button outline item-end icon-left (click)="retrievePassword()">
+        <ion-icon name="sad"></ion-icon>
+        Olvide mi contraseña
+      </button>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+page-home {
+ion-content{
+  background-image: url('../../assets/imgs/ic_background_app.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  border: none;
+}
+  .item-ion{
+    background-color: $ion-md-item;
+  }
+}
+

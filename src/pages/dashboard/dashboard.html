@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="md-menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list inset>
+    <button ion-item *ngFor="let item of food" (click)="itemSelected(item)">
+      {{ item.Name }}
+    </button>
+  </ion-list>
+</ion-content>
